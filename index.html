@@ -1,0 +1,129 @@
+<! DOCTYPE html>
+<head>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+<style> 
+    body{
+        font-family: helvetica, sans-serif;
+        margin: 0 auto;
+        max-width: 600px;
+        background:  #232323;
+        }  
+    h1{
+       font-family: 'Pacifico', cursive;
+       font-size: 80px;
+       text-align: center;
+       margin: 60px 0 0 0;
+       color: #3498db;
+      }
+    h2{
+       text-align: center;
+       margin: 0 0 70px 0;
+       color: #f4d03f;
+      }
+    div{
+       height: 200px;
+       background-size: cover;
+       margin: 40px 0 0 0;
+       position: relative;
+       border-radius: 12px;
+       }
+    .first
+    {
+       background: url("p111.jpg");
+       background-size: cover;
+    }
+    .second
+    {
+       background: url("p222.jpg");
+       background-size: cover;
+    }
+    .third
+    {
+       background: url("p32.jpg");
+       background-size: cover;
+    }
+    p{
+       color: rgba(255,255,255,1);
+       background: black;
+       background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+       background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+       background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+       line-height: 28px;
+       text-align: justify;
+       padding: 10px;
+       position: absolute;
+       bottom: 0;
+       margin: 0;
+       height: 30px;
+       transition: height .5s;
+       -webkit-transition: height .5s;
+       -moz-transition: height .5s;
+      }
+    span{
+       float: right;
+        }
+    small{
+       opacity: 0;
+         }
+    .show-description p
+    {
+       height: 150px;
+    }
+    .show-description small
+    {
+       opacity: 1;
+    }
+    }
+    @media(max-width: 500px)
+    {
+       h1{
+       	   font-size: 50px;
+       	   margin-top: 20px;
+       	   line-height: 40px; 
+         }
+       h2{
+       	   font-size: 20px;
+       	   margin: 20px 0 30px 0;
+         }
+       div{
+       	   margin: 20px 12px 0 12px;
+          }
+       p{
+       	   font-size: 20px;
+       	   line-height: 24px;
+        }
+       small{
+       	   font-size: 16px;
+            }
+    }
+</style>
+</head>
+<body>
+    <h1>Beauty Products</h1>
+    <h2>The future of beauty!</h2>
+    <div class="first">
+      <p>
+        Giordani Gold  <span class="price"> $50 </span> <br/> 
+        <small> Multi-coloured powdered pearls that give skin a sun kissed glow, a slight shimmer and a touch of healthy colour. The spun and hand-shaped beads are enriched with a Mineral Complex for a soft caress of comfort and subtle shimmer.
+        </small>
+      </p>
+    </div>
+    <div class="second">
+      <p>
+        Novage <span class="price"> $45 </span> <br /> 
+        <small> Advanced performing night cream. Corrects wrinkles, smoothes texture and refines tone. Instantly hydrates and nourishes for soft, supple skin. Powered by Tri-Peptide Technology and Solanaceae Plant Stem Cell extract. Delicately fragranced.
+        </small>
+      </p>
+    </div>
+    <div class="third">
+      <p>
+        Tender care balm <span class="price"> $20 </span> <br /> 
+        <small> Tender Care Protecting Balm is perfect for hydrating, softening and protecting dry, rough skin thanks to the delicately scented natural Beeswax and Vitamin E formula that has made it famous for decades.
+        </small>
+      </p>
+    </div>
+<script>
+	$('div').hover( function() { $(this).toggleClass('show-description'); });
+</script>
+</body>
